@@ -1,63 +1,96 @@
-<!DOCTYPE html>
+<!Doctype HTML>
+<html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title>Question One</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-        td{
-            padding: 1rem;
-        }
-        #container{
-        }
-        #wrapper {
-            display: flex;
-            justify-content: flex-end;
-        }
-        button{
-            margin-top: 1rem;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
-    <script type = "text/javascript" language = "javascript">
-        $(document).ready(function () {
-            $("button").click(function () {
-                $("#wrapper").css("justify-content", "flex-start");
-            })
-        })
-    </script>
+    <title>Student Bio Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <br />
-    <div id="container">
-        <div id="wrapper">
-            <table>
-                <tr>
-                    <td bgcolor="yellow">One</td>
-                    <td bgcolor="yellow">Two</td>
-                    <td bgcolor="yellow">Three</td>
-                </tr>
-                <tr>
-                    <td bgcolor="pink">Four</td>
-                    <td bgcolor="pink">Five</td>
-                    <td bgcolor="pink">Six</td>
-                </tr>
-                <tr>
-                    <td bgcolor="yellow">Seven</td>
-                    <td bgcolor="yellow">Eight</td>
-                    <td bgcolor="yellow">Nine</td>
-                </tr>
+    <h3> Student Bio-Data </h3>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="inputName1"><h6>Please Enter your Name:</h6></label>
+                <input type="name" class="form-control" id="inputName1" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <label for="inputRegNo1"><h6>Please Enter your Registration Number:</h6> </label>
+                <input type="number" class="form-control" id="inputRegNo1" placeholder="Enter Registration No">
+            </div>
+            
+<div class="form-group">
+<label for="dob"><h6>Date Of Birth:</h6></label>
+<input type="name" class="form-control" id="dob" placeholder="YYYY-MM-DD">
+</div>
+	<h6> Gender</h6>
+	<div class="form-check">
+	<input type="radio" class="form-check-input" id="gender">
+	<label class="form-check-label" for="gender">Male</label>
+	</div>
+	<div class="form-check">
+	<input type="radio" class="form-check-input" id="gender">
+	<label class="form-check-label" for="gender">Female</label>
+	</div>
+<div class="form-group">
+<label for="address"><h6>Address:</h6></label>
+<input type="name" class="form-control" id="dob">
+</div>
+	
+        </form>
+        <br>
+        <br>
+        <p class="font-weight-bold"Grades for subjects :</p>
+        <br>
+        <br>
+        <div class="table-responsive col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                  
+                    </tr>
+                    <tr>
+                        <td>Finance</td>
+                        <td>
+                            <input type="name" name="radios1"/>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        
+                        <td>
+                            <input type="name" name="radios2" />
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Medical Science</td>
+                        
+                        <td>
+                            <input type="name" name="radios3"/>
+                            
+                        </td>
+                    </tr>
+                </tbody>
             </table>
-            <br />
-            <img src="manipal.jpg" alt="college image" width="200" height="200">
         </div>
-        <button type="button">Move right to left!</button>
     </div>
+<div class="form-check">
+                <input type="checkbox" class="form-check-input" id="confirmDetails">
+                <label class="form-check-label" for="confirmDetails">Please tick the check box to Confirm your
+                    Details</label>
+            </div>
+<br>
+            <button type="submit" class="btn btn-primary">Submit</button>
 
 </body>
+
 </html>
