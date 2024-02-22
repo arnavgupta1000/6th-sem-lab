@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Student info</h2>
+		<form id="Student">
+			<div class="form-group">
+				<label for="name">Enter name</label>
+				<input type="text" id="name" class="form-control" >
+			</div>
+			<div class="form-group">
+				<label for="email">Enter email</label>
+				<input type="email" id="email" class="form-control">
+			</div>
+			<button type="button" class="btn btn-outline-success" onclick="submitB()">Submit</button>
+		</form>
+		<table class="table table-dark table-stripped">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Email</td>
+				</tr>
+			</thead>
+			<tbody id="record">
+				
+			</tbody>
+	</div>
+	<script>
+		function submitB(){
+			var name=document.getElementById("name").value;
+			var email=document.getElementById("email").value;
+			var tablee=document.getElementById("record");
+			var newrow=document.createElement("tr");
+			var namecell=document.createElement("td");
+			var emailcell=document.createElement("td");
+			namecell.textContent=name;
+			newrow.appendChild(namecell);
+			emailcell.textContent=email;
+			newrow.appendChild(emailcell);
+			tablee.appendChild(newrow);
+
+		}
+	</script>
+
+</body>
+</html>
+

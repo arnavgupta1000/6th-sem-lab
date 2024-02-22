@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Student Information</h2>
+    <!-- Form to input student name and email address -->
+    <form id="studentForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+      </div>
+      <button type="submit" id="submit" class="btn btn-primary">Update</button>
+    </form>
+
+    <!-- Table to display student information -->
+    <h2 class="mt-5">Student Table</h2>
+    <table class="table table-dark table-stripped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody">
+        <!-- Student information will be inserted here dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (for form submission handling) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Handle form submission
+      $('#submit').click(function(event) {
+        event.preventDefault(); // Prevent default form submission
+        var name = $('#name').val();
+        var email = $('#email').val();
+
+        // Append new row to the table with entered data
+        $('#studentTableBody').append('<tr><td>' + name + '</td><td>' + email + '</td></tr>');
+
+        // Clear form fields after submission
+        $('#name').val('');
+        $('#email').val('');
+      });
+    });
+  </script>
+</body>
+</html>
